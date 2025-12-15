@@ -1,0 +1,24 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C/C++/Go
+*.exe
+*.obj
+*.o
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+main
+
+# Project Specific
+captured_face_*
+frames/
+
+# OS
+.DS_Store
+Thumbs.db
