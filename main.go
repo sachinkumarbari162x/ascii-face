@@ -41,6 +41,11 @@ func main() {
 		pythonPath = filepath.Join(cwd, "venv", "bin", "python")
 	}
 
+	if _, err := os.Stat(pythonPath); os.IsNotExist(err) {
+		fmt.Printf("Error: Python environment not found at %s. Please ensure 'venv' is created.\n", pythonPath)
+		return
+	}
+
     // 3. Determine Mode
     var cameraIdx string
     

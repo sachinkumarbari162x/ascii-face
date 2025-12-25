@@ -20,8 +20,9 @@ int main() {
         return 1;
     }
     
-    if (choice < 0 || choice > 10) {
-        printf("Camera index out of likely range (0-10). Proceeding anyway...\n");
+    if (choice < 0 || choice > 9) {
+        printf("Error: Camera index must be between 0 and 9.\n");
+        return 1;
     }
 
     // Since 'go' might not be in PATH as per earlier steps, we use the full path if we knew it.

@@ -131,11 +131,12 @@ def main():
             else:
                 # Time to capture!
                 # Capture irrespective of face
-                filename = f"captured_face_{capture_count + 1}.jpg"
+                timestamp = int(time.time())
+                filename = f"captured_face_{timestamp}_{capture_count + 1}.jpg"
                 try:
                     cv2.imwrite(filename, frame)
                     # Save ASCII too
-                    with open(f"captured_face_{capture_count + 1}.txt", "w") as f:
+                    with open(f"captured_face_{timestamp}_{capture_count + 1}.txt", "w") as f:
                         f.write("\n".join(ascii_text_lines))
                 except Exception as e:
                     sys.stderr.write(f"Error saving: {e}\n")
